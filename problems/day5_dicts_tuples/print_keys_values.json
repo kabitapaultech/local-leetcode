@@ -1,0 +1,30 @@
+{
+  "id": "print_keys_values",
+  "title": "Print Keys and Values",
+  "description": "Return list of key-value tuples.",
+  "function_signature": "def solve(d):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "{'a': 1, 'b': 2}",
+  "sample_output": "[['a', 1], ['b', 2]]",
+  "test_cases": [
+    {
+      "input": "{'a': 1, 'b': 2}",
+      "output": "[['a', 1], ['b', 2]]"
+    },
+    {
+      "input": "{'x': 10}",
+      "output": "[['x', 10]]"
+    },
+    {
+      "input": "{}",
+      "output": "[]"
+    },
+    {
+      "input": "{'p': 5, 'q': 6}",
+      "output": "[['p', 5], ['q', 6]]"
+    },
+    {
+      "input": "{'name': 'A'}",
+      "output": "[['name', 'A']]"
+    }
+  ]
+}

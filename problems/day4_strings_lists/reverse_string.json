@@ -1,0 +1,30 @@
+{
+  "id": "reverse_string",
+  "title": "Reverse String",
+  "description": "Return reversed string.",
+  "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "'python'",
+  "sample_output": "'nohtyp'",
+  "test_cases": [
+    {
+      "input": "'python'",
+      "output": "'nohtyp'"
+    },
+    {
+      "input": "'madam'",
+      "output": "'madam'"
+    },
+    {
+      "input": "'abc'",
+      "output": "'cba'"
+    },
+    {
+      "input": "''",
+      "output": "''"
+    },
+    {
+      "input": "'a'",
+      "output": "'a'"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "count_vowels",
+  "title": "Count Vowels",
+  "description": "Count vowels in string.",
+  "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "'python'",
+  "sample_output": "1",
+  "test_cases": [
+    {
+      "input": "'python'",
+      "output": "1"
+    },
+    {
+      "input": "'aeiou'",
+      "output": "5"
+    },
+    {
+      "input": "'bcdf'",
+      "output": "0"
+    },
+    {
+      "input": "'education'",
+      "output": "5"
+    },
+    {
+      "input": "''",
+      "output": "0"
+    }
+  ]
+}

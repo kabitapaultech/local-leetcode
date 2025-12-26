@@ -1,0 +1,30 @@
+{
+  "id": "square_cube",
+  "title": "Square and Cube",
+  "description": "Return square and cube of a number.",
+  "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "2",
+  "sample_output": "[4, 8]",
+  "test_cases": [
+    {
+      "input": "2",
+      "output": "[4, 8]"
+    },
+    {
+      "input": "3",
+      "output": "[9, 27]"
+    },
+    {
+      "input": "0",
+      "output": "[0, 0]"
+    },
+    {
+      "input": "1",
+      "output": "[1, 1]"
+    },
+    {
+      "input": "5",
+      "output": "[25, 125]"
+    }
+  ]
+}

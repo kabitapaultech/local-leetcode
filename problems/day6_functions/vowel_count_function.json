@@ -1,0 +1,30 @@
+{
+  "id": "vowel_count_function",
+  "title": "Vowel Count Function",
+  "description": "Return vowel count.",
+  "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "'aeiou'",
+  "sample_output": "5",
+  "test_cases": [
+    {
+      "input": "'aeiou'",
+      "output": "5"
+    },
+    {
+      "input": "'python'",
+      "output": "1"
+    },
+    {
+      "input": "'bcdf'",
+      "output": "0"
+    },
+    {
+      "input": "'education'",
+      "output": "5"
+    },
+    {
+      "input": "''",
+      "output": "0"
+    }
+  ]
+}

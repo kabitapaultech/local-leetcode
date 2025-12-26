@@ -1,0 +1,30 @@
+{
+  "id": "grade_calculator",
+  "title": "Grade Calculator",
+  "description": "Return grade based on marks.",
+  "function_signature": "def solve(marks):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "95",
+  "sample_output": "'A'",
+  "test_cases": [
+    {
+      "input": "95",
+      "output": "'A'"
+    },
+    {
+      "input": "85",
+      "output": "'B'"
+    },
+    {
+      "input": "75",
+      "output": "'C'"
+    },
+    {
+      "input": "65",
+      "output": "'D'"
+    },
+    {
+      "input": "50",
+      "output": "'F'"
+    }
+  ]
+}

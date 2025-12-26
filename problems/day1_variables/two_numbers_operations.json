@@ -1,0 +1,30 @@
+{
+  "id": "two_numbers_operations",
+  "title": "Two Numbers Operations",
+  "description": "Return sum, difference and product.",
+  "function_signature": "def solve(a, b):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "5, 3",
+  "sample_output": "[8, 2, 15]",
+  "test_cases": [
+    {
+      "input": "5, 3",
+      "output": "[8, 2, 15]"
+    },
+    {
+      "input": "10, 2",
+      "output": "[12, 8, 20]"
+    },
+    {
+      "input": "0, 5",
+      "output": "[5, -5, 0]"
+    },
+    {
+      "input": "7, 7",
+      "output": "[14, 0, 49]"
+    },
+    {
+      "input": "9, 1",
+      "output": "[10, 8, 9]"
+    }
+  ]
+}

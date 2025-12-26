@@ -1,0 +1,30 @@
+{
+  "id": "palindrome_check",
+  "title": "Palindrome Check",
+  "description": "Check if string is palindrome.",
+  "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "'madam'",
+  "sample_output": "True",
+  "test_cases": [
+    {
+      "input": "'madam'",
+      "output": "True"
+    },
+    {
+      "input": "'python'",
+      "output": "False"
+    },
+    {
+      "input": "'level'",
+      "output": "True"
+    },
+    {
+      "input": "'a'",
+      "output": "True"
+    },
+    {
+      "input": "'ab'",
+      "output": "False"
+    }
+  ]
+}

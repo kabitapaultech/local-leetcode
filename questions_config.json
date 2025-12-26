@@ -1,0 +1,667 @@
+{
+  "day1_variables": {
+    "title": "Day 1 — Variables & Data Types",
+    "problems": [
+      {
+        "id": "name_age_sentence",
+        "title": "Name and Age Sentence",
+        "signature": "def solve(name, age):",
+        "description": "Return a sentence using name and age.",
+        "tests": [
+          [["Alice", 20], "My name is Alice and I am 20 years old"],
+          [["Bob", 30], "My name is Bob and I am 30 years old"],
+          [["Eva", 18], "My name is Eva and I am 18 years old"],
+          [["John", 45], "My name is John and I am 45 years old"],
+          [["Sam", 10], "My name is Sam and I am 10 years old"]
+        ]
+      },
+      {
+        "id": "two_numbers_operations",
+        "title": "Two Numbers Operations",
+        "signature": "def solve(a, b):",
+        "description": "Return sum, difference and product.",
+        "tests": [
+          [[5, 3], [8, 2, 15]],
+          [[10, 2], [12, 8, 20]],
+          [[0, 5], [5, -5, 0]],
+          [[7, 7], [14, 0, 49]],
+          [[9, 1], [10, 8, 9]]
+        ]
+      },
+      {
+        "id": "km_to_meters",
+        "title": "Kilometers to Meters",
+        "signature": "def solve(km):",
+        "description": "Convert kilometers to meters.",
+        "tests": [
+          [1, 1000],
+          [0, 0],
+          [2.5, 2500],
+          [10, 10000],
+          [0.75, 750]
+        ]
+      },
+      {
+        "id": "area_rectangle",
+        "title": "Area of Rectangle",
+        "signature": "def solve(length, breadth):",
+        "description": "Return area of rectangle.",
+        "tests": [
+          [[5, 4], 20],
+          [[10, 2], 20],
+          [[3, 7], 21],
+          [[1, 1], 1],
+          [[6, 8], 48]
+        ]
+      },
+      {
+        "id": "square_cube",
+        "title": "Square and Cube",
+        "signature": "def solve(n):",
+        "description": "Return square and cube of a number.",
+        "tests": [
+          [2, [4, 8]],
+          [3, [9, 27]],
+          [0, [0, 0]],
+          [1, [1, 1]],
+          [5, [25, 125]]
+        ]
+      },
+      {
+        "id": "total_average_marks",
+        "title": "Total and Average Marks",
+        "signature": "def solve(a, b, c):",
+        "description": "Return total and average of three marks.",
+        "tests": [
+          [[70, 80, 90], [240, 80.0]],
+          [[50, 50, 50], [150, 50.0]],
+          [[100, 90, 80], [270, 90.0]],
+          [[0, 0, 0], [0, 0.0]],
+          [[60, 70, 80], [210, 70.0]]
+        ]
+      },
+      {
+        "id": "discounted_price",
+        "title": "Discounted Price",
+        "signature": "def solve(price, discount):",
+        "description": "Return final price after discount percentage.",
+        "tests": [
+          [[100, 10], 90],
+          [[200, 25], 150],
+          [[500, 50], 250],
+          [[1000, 0], 1000],
+          [[80, 20], 64]
+        ]
+      },
+      {
+        "id": "swap_numbers",
+        "title": "Swap Two Numbers",
+        "signature": "def solve(a, b):",
+        "description": "Return swapped values.",
+        "tests": [
+          [[1, 2], [2, 1]],
+          [[5, 10], [10, 5]],
+          [[0, 7], [7, 0]],
+          [[-1, 1], [1, -1]],
+          [[9, 9], [9, 9]]
+        ]
+      }
+    ]
+  },
+
+  "day2_conditions": {
+    "title": "Day 2 — Conditions",
+    "problems": [
+      {
+        "id": "even_odd",
+        "title": "Even or Odd",
+        "signature": "def solve(n):",
+        "description": "Check if number is even or odd.",
+        "tests": [
+          [2, "Even"],
+          [3, "Odd"],
+          [0, "Even"],
+          [11, "Odd"],
+          [100, "Even"]
+        ]
+      },
+      {
+        "id": "positive_negative_zero",
+        "title": "Positive Negative Zero",
+        "signature": "def solve(n):",
+        "description": "Check if number is positive, negative or zero.",
+        "tests": [
+          [5, "Positive"],
+          [-3, "Negative"],
+          [0, "Zero"],
+          [100, "Positive"],
+          [-1, "Negative"]
+        ]
+      },
+      {
+        "id": "largest_of_two",
+        "title": "Largest of Two Numbers",
+        "signature": "def solve(a, b):",
+        "description": "Return largest of two numbers.",
+        "tests": [
+          [[5, 3], 5],
+          [[10, 20], 20],
+          [[7, 7], 7],
+          [[-1, -5], -1],
+          [[0, 3], 3]
+        ]
+      },
+      {
+        "id": "largest_of_three",
+        "title": "Largest of Three Numbers",
+        "signature": "def solve(a, b, c):",
+        "description": "Return largest of three numbers.",
+        "tests": [
+          [[1, 2, 3], 3],
+          [[10, 5, 7], 10],
+          [[-1, -5, -3], -1],
+          [[5, 5, 2], 5],
+          [[9, 9, 9], 9]
+        ]
+      },
+      {
+        "id": "leap_year",
+        "title": "Leap Year Check",
+        "signature": "def solve(year):",
+        "description": "Check if year is leap year.",
+        "tests": [
+          [2020, true],
+          [1900, false],
+          [2000, true],
+          [2021, false],
+          [2400, true]
+        ]
+      },
+      {
+        "id": "grade_calculator",
+        "title": "Grade Calculator",
+        "signature": "def solve(marks):",
+        "description": "Return grade based on marks.",
+        "tests": [
+          [95, "A"],
+          [85, "B"],
+          [75, "C"],
+          [65, "D"],
+          [50, "F"]
+        ]
+      },
+      {
+        "id": "login_validation",
+        "title": "Login Validation",
+        "signature": "def solve(username, password):",
+        "description": "Validate login credentials.",
+        "tests": [
+          [["admin", "1234"], true],
+          [["user", "1234"], false],
+          [["admin", "pass"], false],
+          [["root", "root"], false],
+          [["admin", "1234"], true]
+        ]
+      },
+      {
+        "id": "voting_eligibility",
+        "title": "Voting Eligibility",
+        "signature": "def solve(age):",
+        "description": "Check voting eligibility.",
+        "tests": [
+          [18, "Eligible"],
+          [17, "Not Eligible"],
+          [21, "Eligible"],
+          [0, "Not Eligible"],
+          [100, "Eligible"]
+        ]
+      }
+    ]
+  },
+
+  "day3_loops": {
+    "title": "Day 3 — Loops",
+    "problems": [
+      {
+        "id": "print_1_to_100",
+        "title": "Print 1 to 100",
+        "signature": "def solve():",
+        "description": "Return numbers from 1 to 100 as list.",
+        "tests": [
+          [null, [1,2,3,4,5]],
+          [null, [1,2,3,4,5]],
+          [null, [1,2,3,4,5]],
+          [null, [1,2,3,4,5]],
+          [null, [1,2,3,4,5]]
+        ]
+      },
+      {
+        "id": "factorial",
+        "title": "Factorial",
+        "signature": "def solve(n):",
+        "description": "Return factorial of number.",
+        "tests": [
+          [0, 1],
+          [1, 1],
+          [3, 6],
+          [5, 120],
+          [6, 720]
+        ]
+      },
+      {
+        "id": "prime_check",
+        "title": "Prime Check",
+        "signature": "def solve(n):",
+        "description": "Check if number is prime.",
+        "tests": [
+          [2, true],
+          [3, true],
+          [4, false],
+          [17, true],
+          [20, false]
+        ]
+      }
+    ]
+  },
+
+  "day4_strings_lists": {
+    "title": "Day 4 — Strings & Lists",
+    "problems": [
+      {
+        "id": "reverse_string",
+        "title": "Reverse String",
+        "signature": "def solve(s):",
+        "description": "Return reversed string.",
+        "tests": [
+          ["python", "nohtyp"],
+          ["madam", "madam"],
+          ["abc", "cba"],
+          ["", ""],
+          ["a", "a"]
+        ]
+      },
+      {
+        "id": "palindrome_check",
+        "title": "Palindrome Check",
+        "signature": "def solve(s):",
+        "description": "Check if string is palindrome.",
+        "tests": [
+          ["madam", true],
+          ["python", false],
+          ["level", true],
+          ["a", true],
+          ["ab", false]
+        ]
+      },
+      {
+        "id": "count_vowels",
+        "title": "Count Vowels",
+        "signature": "def solve(s):",
+        "description": "Count vowels in string.",
+        "tests": [
+          ["python", 1],
+          ["aeiou", 5],
+          ["bcdf", 0],
+          ["education", 5],
+          ["", 0]
+        ]
+      },
+      {
+        "id": "remove_duplicates",
+        "title": "Remove Duplicates",
+        "signature": "def solve(arr):",
+        "description": "Remove duplicates from list.",
+        "tests": [
+          [[1,2,2,3], [1,2,3]],
+          [[5,5,5], [5]],
+          [[1,2,3], [1,2,3]],
+          [[0,0,1], [0,1]],
+          [[9,8,9], [9,8]]
+        ]
+      },
+      {
+        "id": "second_largest",
+        "title": "Second Largest Element",
+        "signature": "def solve(arr):",
+        "description": "Return second largest element.",
+        "tests": [
+          [[1,2,3], 2],
+          [[10,5,8], 8],
+          [[5,5,5], 5],
+          [[9,7,8], 8],
+          [[1,3,2], 2]
+        ]
+      }
+    ]
+  },
+
+  "day5_dicts_tuples": {
+    "title": "Day 5 — Dictionaries & Tuples",
+    "problems": [
+      {
+        "id": "student_dictionary",
+        "title": "Student Dictionary Creation",
+        "signature": "def solve(name, marks):",
+        "description": "Create and return student dictionary.",
+        "tests": [
+          [["A", 90], {"name": "A", "marks": 90}],
+          [["B", 75], {"name": "B", "marks": 75}],
+          [["C", 60], {"name": "C", "marks": 60}],
+          [["D", 100], {"name": "D", "marks": 100}],
+          [["E", 0], {"name": "E", "marks": 0}]
+        ]
+      },
+      {
+        "id": "print_keys_values",
+        "title": "Print Keys and Values",
+        "signature": "def solve(d):",
+        "description": "Return list of key-value tuples.",
+        "tests": [
+          [{"a": 1, "b": 2}, [["a", 1], ["b", 2]]],
+          [{"x": 10}, [["x", 10]]],
+          [{}, []],
+          [{"p": 5, "q": 6}, [["p", 5], ["q", 6]]],
+          [{"name": "A"}, [["name", "A"]]]
+        ]
+      },
+      {
+        "id": "char_frequency",
+        "title": "Character Frequency",
+        "signature": "def solve(s):",
+        "description": "Return frequency of each character.",
+        "tests": [
+          ["aab", {"a": 2, "b": 1}],
+          ["abc", {"a": 1, "b": 1, "c": 1}],
+          ["", {}],
+          ["aaAA", {"a": 2, "A": 2}],
+          ["python", {"p":1,"y":1,"t":1,"h":1,"o":1,"n":1}]
+        ]
+      },
+      {
+        "id": "word_frequency",
+        "title": "Word Frequency",
+        "signature": "def solve(s):",
+        "description": "Return frequency of each word.",
+        "tests": [
+          ["a b a", {"a": 2, "b": 1}],
+          ["hello world", {"hello": 1, "world": 1}],
+          ["", {}],
+          ["one one one", {"one": 3}],
+          ["python is fun", {"python":1,"is":1,"fun":1}]
+        ]
+      },
+      {
+        "id": "highest_marks",
+        "title": "Highest Marks Student",
+        "signature": "def solve(d):",
+        "description": "Return name of student with highest marks.",
+        "tests": [
+          [{"A": 90, "B": 80}, "A"],
+          [{"X": 50, "Y": 75}, "Y"],
+          [{"P": 100}, "P"],
+          [{"A": 60, "B": 60}, "A"],
+          [{"S": 30, "T": 20}, "S"]
+        ]
+      },
+      {
+        "id": "merge_dictionaries",
+        "title": "Merge Dictionaries",
+        "signature": "def solve(d1, d2):",
+        "description": "Merge two dictionaries.",
+        "tests": [
+          [[{"a":1}, {"b":2}], {"a":1,"b":2}],
+          [[{}, {"x":5}], {"x":5}],
+          [[{"a":1}, {}], {"a":1}],
+          [[{"a":1}, {"a":2}], {"a":2}],
+          [[{"p":3}, {"q":4}], {"p":3,"q":4}]
+        ]
+      },
+      {
+        "id": "list_to_dict",
+        "title": "List to Dictionary",
+        "signature": "def solve(arr):",
+        "description": "Convert list to dictionary with index as key.",
+      "tests": [
+  [[1,2,3], {"0":1,"1":2,"2":3}],
+  [["a","b"], {"0":"a","1":"b"}],
+  [[], {}],
+  [[5], {"0":5}],
+  [[9,8,7], {"0":9,"1":8,"2":7}]
+]
+      },
+      {
+        "id": "phonebook_search",
+        "title": "Phonebook Search",
+        "signature": "def solve(phonebook, name):",
+        "description": "Return phone number or Not Found.",
+        "tests": [
+          [[{"A":"123"}, "A"], "123"],
+          [[{"A":"123"}, "B"], "Not Found"],
+          [[{}, "X"], "Not Found"],
+          [[{"P":"999"}, "P"], "999"],
+          [[{"K":"111"}, "Z"], "Not Found"]
+        ]
+      }
+    ]
+  },
+
+  "day6_functions": {
+    "title": "Day 6 — Functions",
+    "problems": [
+      {
+        "id": "add_function",
+        "title": "Add Two Numbers",
+        "signature": "def solve(a, b):",
+        "description": "Return sum of two numbers.",
+        "tests": [
+          [[2,3], 5],
+          [[0,0], 0],
+          [[-1,1], 0],
+          [[10,5], 15],
+          [[7,8], 15]
+        ]
+      },
+      {
+        "id": "even_odd_function",
+        "title": "Even or Odd Function",
+        "signature": "def solve(n):",
+        "description": "Return Even or Odd.",
+        "tests": [
+          [2, "Even"],
+          [3, "Odd"],
+          [0, "Even"],
+          [11, "Odd"],
+          [100, "Even"]
+        ]
+      },
+      {
+        "id": "factorial_function",
+        "title": "Factorial Function",
+        "signature": "def solve(n):",
+        "description": "Return factorial.",
+        "tests": [
+          [0, 1],
+          [1, 1],
+          [4, 24],
+          [5, 120],
+          [6, 720]
+        ]
+      },
+      {
+        "id": "prime_function",
+        "title": "Prime Check Function",
+        "signature": "def solve(n):",
+        "description": "Check if number is prime.",
+        "tests": [
+          [2, true],
+          [3, true],
+          [4, false],
+          [17, true],
+          [20, false]
+        ]
+      },
+      {
+        "id": "max_of_three",
+        "title": "Max of Three Numbers",
+        "signature": "def solve(a, b, c):",
+        "description": "Return max of three numbers.",
+        "tests": [
+          [[1,2,3], 3],
+          [[10,5,7], 10],
+          [[-1,-2,-3], -1],
+          [[5,5,5], 5],
+          [[9,8,7], 9]
+        ]
+      },
+      {
+        "id": "reverse_string_function",
+        "title": "Reverse String Function",
+        "signature": "def solve(s):",
+        "description": "Return reversed string.",
+        "tests": [
+          ["abc", "cba"],
+          ["", ""],
+          ["a", "a"],
+          ["madam", "madam"],
+          ["python", "nohtyp"]
+        ]
+      },
+      {
+        "id": "vowel_count_function",
+        "title": "Vowel Count Function",
+        "signature": "def solve(s):",
+        "description": "Return vowel count.",
+        "tests": [
+          ["aeiou", 5],
+          ["python", 1],
+          ["bcdf", 0],
+          ["education", 5],
+          ["", 0]
+        ]
+      },
+      {
+        "id": "fibonacci_function",
+        "title": "Fibonacci Function",
+        "signature": "def solve(n):",
+        "description": "Return Fibonacci sequence up to n terms.",
+        "tests": [
+          [1, [0]],
+          [2, [0,1]],
+          [5, [0,1,1,2,3]],
+          [7, [0,1,1,2,3,5,8]],
+          [0, []]
+        ]
+      }
+    ]
+  },
+
+  "day7_integrated": {
+    "title": "Day 7 — Integrated Problem Solving",
+    "problems": [
+      {
+        "id": "fizz_buzz",
+        "title": "FizzBuzz",
+        "signature": "def solve(n):",
+        "description": "Return FizzBuzz list up to n.",
+        "tests": [
+          [5, ["1","2","Fizz","4","Buzz"]],
+          [3, ["1","2","Fizz"]],
+          [1, ["1"]],
+          [15, ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]],
+          [0, []]
+        ]
+      },
+      {
+        "id": "sum_of_digits",
+        "title": "Sum of Digits",
+        "signature": "def solve(n):",
+        "description": "Return sum of digits.",
+        "tests": [
+          [123, 6],
+          [0, 0],
+          [999, 27],
+          [10, 1],
+          [5, 5]
+        ]
+      },
+      {
+        "id": "frequency_numbers",
+        "title": "Frequency of Numbers",
+        "signature": "def solve(arr):",
+        "description": "Return frequency of numbers.",
+      "tests": [
+  [[1,2,2,3], {"1":1,"2":2,"3":1}],
+  [[5,5,5], {"5":3}],
+  [[], {}],
+  [[0,1,0], {"0":2,"1":1}],
+  [[9], {"9":1}]
+]
+      },
+      {
+        "id": "duplicate_finder",
+        "title": "Duplicate Finder",
+        "signature": "def solve(arr):",
+        "description": "Return list of duplicates.",
+        "tests": [
+          [[1,2,2,3], [2]],
+          [[5,5,5], [5]],
+          [[1,2,3], []],
+          [[0,0,1], [0]],
+          [[9,8,9], [9]]
+        ]
+      },
+      {
+        "id": "two_sum_basic",
+        "title": "Two Sum (Basic)",
+        "signature": "def solve(arr, target):",
+        "description": "Return indices of two numbers.",
+        "tests": [
+          [[[2,7,11,15], 9], [0,1]],
+          [[[3,2,4], 6], [1,2]],
+          [[[1,2,3], 5], [1,2]],
+          [[[0,4,3,0], 0], [0,3]],
+          [[[5,5], 10], [0,1]]
+        ]
+      },
+      {
+        "id": "atm_program",
+        "title": "ATM Program",
+        "signature": "def solve(balance, amount):",
+        "description": "Withdraw amount if possible.",
+        "tests": [
+          [[1000, 500], 500],
+          [[1000, 1000], 0],
+          [[500, 1000], "Insufficient Balance"],
+          [[200, 0], 200],
+          [[300, 100], 200]
+        ]
+      },
+      {
+        "id": "student_management",
+        "title": "Student Management System",
+        "signature": "def solve(students):",
+        "description": "Return total students.",
+        "tests": [
+          [[{"A":90}], 1],
+          [[{"A":90,"B":80}], 2],
+          [[{}], 0],
+          [[{"X":50,"Y":60,"Z":70}], 3],
+          [[{"S":100}], 1]
+        ]
+      },
+      {
+        "id": "menu_driven",
+        "title": "Menu Driven Program",
+        "signature": "def solve(choices):",
+        "description": "Return processed choices count.",
+        "tests": [
+          [[1,2,3], 3],
+          [[1], 1],
+          [[], 0],
+          [[2,2,2], 3],
+          [[1,3], 2]
+        ]
+      }
+    ]
+  }
+}

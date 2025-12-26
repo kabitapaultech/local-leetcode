@@ -1,0 +1,30 @@
+{
+  "id": "discounted_price",
+  "title": "Discounted Price",
+  "description": "Return final price after discount percentage.",
+  "function_signature": "def solve(price, discount):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "100, 10",
+  "sample_output": "90",
+  "test_cases": [
+    {
+      "input": "100, 10",
+      "output": "90"
+    },
+    {
+      "input": "200, 25",
+      "output": "150"
+    },
+    {
+      "input": "500, 50",
+      "output": "250"
+    },
+    {
+      "input": "1000, 0",
+      "output": "1000"
+    },
+    {
+      "input": "80, 20",
+      "output": "64"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "area_rectangle",
+  "title": "Area of Rectangle",
+  "description": "Return area of rectangle.",
+  "function_signature": "def solve(length, breadth):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "5, 4",
+  "sample_output": "20",
+  "test_cases": [
+    {
+      "input": "5, 4",
+      "output": "20"
+    },
+    {
+      "input": "10, 2",
+      "output": "20"
+    },
+    {
+      "input": "3, 7",
+      "output": "21"
+    },
+    {
+      "input": "1, 1",
+      "output": "1"
+    },
+    {
+      "input": "6, 8",
+      "output": "48"
+    }
+  ]
+}

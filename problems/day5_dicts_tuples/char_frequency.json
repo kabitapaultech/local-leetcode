@@ -1,0 +1,30 @@
+{
+  "id": "char_frequency",
+  "title": "Character Frequency",
+  "description": "Return frequency of each character.",
+  "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
+  "sample_input": "'aab'",
+  "sample_output": "{'a': 2, 'b': 1}",
+  "test_cases": [
+    {
+      "input": "'aab'",
+      "output": "{'a': 2, 'b': 1}"
+    },
+    {
+      "input": "'abc'",
+      "output": "{'a': 1, 'b': 1, 'c': 1}"
+    },
+    {
+      "input": "''",
+      "output": "{}"
+    },
+    {
+      "input": "'aaAA'",
+      "output": "{'a': 2, 'A': 2}"
+    },
+    {
+      "input": "'python'",
+      "output": "{'p': 1, 'y': 1, 't': 1, 'h': 1, 'o': 1, 'n': 1}"
+    }
+  ]
+}
