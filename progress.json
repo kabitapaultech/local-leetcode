@@ -1,6 +1,13 @@
 {
   "solved": [
     "even_odd",
-    "prime_check"
-  ]
+    "prime_check",
+    "area_rectangle",
+    "discounted_price"
+  ],
+  "solve_log": {
+    "2025-12-26": [
+      "discounted_price"
+    ]
+  }
 }

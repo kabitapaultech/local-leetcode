@@ -220,3 +220,90 @@ button:disabled {
 .test-line b {
   color: var(--blue);
 }
+
+/* ---------- DASHBOARD ---------- */
+
+.dashboard {
+  max-width: 800px;
+  margin: 40px auto;
+  color: var(--text-primary);
+}
+
+.dashboard h1 {
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--bg-panel);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.big {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #020617;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--blue);
+  text-decoration: none;
+}
+/* ---------- TOP BAR ---------- */
+
+.topbar {
+  height: 56px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-link {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #1e293b;
+}

@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify
 import json
 import os
 from runner.code_runner import evaluate_code
+from datetime import date
+
 
 app = Flask(__name__)
 
@@ -111,6 +113,11 @@ def run_code():
     progress = load_progress()
     if passed and problem_id not in progress["solved"]:
         progress["solved"].append(problem_id)
+        today = str(date.today())
+        progress.setdefault("solve_log", {})
+        progress["solve_log"].setdefault(today, [])
+        progress["solve_log"][today].append(problem_id)
+
         save_progress(progress)
 
     return jsonify({
@@ -118,6 +125,57 @@ def run_code():
         "details": details
     })
 
+@app.route("/dashboard")
+def dashboard():
+    sidebar = load_problem_index()
+    progress = load_progress()
+
+    solved = set(progress.get("solved", []))
+
+    total = 0
+    day_stats = []
+
+    for day in sidebar:
+        day_total = len(day["problems"])
+        day_solved = sum(1 for p in day["problems"] if p["id"] in solved)
+
+        total += day_total
+        day_stats.append({
+            "day": day["day"],
+            "solved": day_solved,
+            "total": day_total,
+            "percent": int((day_solved / day_total) * 100) if day_total else 0
+        })
+
+    overall_percent = int((len(solved) / total) * 100) if total else 0
+
+    # 🔥 Streak calculation
+    streak = 0
+    best_streak = 0
+    log = progress.get("solve_log", {})
+
+    sorted_days = sorted(log.keys())
+    prev = None
+
+    for d in sorted_days:
+        if prev is None:
+            streak = 1
+        else:
+            diff = (date.fromisoformat(d) - date.fromisoformat(prev)).days
+            streak = streak + 1 if diff == 1 else 1
+
+        best_streak = max(best_streak, streak)
+        prev = d
+
+    return render_template(
+        "dashboard.html",
+        overall_percent=overall_percent,
+        day_stats=day_stats,
+        solved_count=len(solved),
+        total_count=total,
+        current_streak=streak,
+        best_streak=best_streak
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
