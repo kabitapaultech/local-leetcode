@@ -1,20 +1,25 @@
-/* ================================
-   🎨 COLOR + ENERGY SYSTEM (SAFE)
-   ================================ */
+/* ======================================================
+   🎨 DESIGN TOKENS — COLOR, ENERGY, SHADOW
+   ====================================================== */
 
 :root {
+  /* Backgrounds */
   --bg-main: radial-gradient(1200px at 10% 10%, #0f172a 0%, #020617 45%);
   --bg-panel: #0f172a;
   --bg-header: #020617;
   --bg-hover: #1e293b;
   --bg-focus: rgba(56, 189, 248, 0.15);
 
+  /* Borders & Shadows */
   --border: rgba(148, 163, 184, 0.15);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
 
+  /* Text */
   --text-primary: #e5e7eb;
   --text-secondary: #9ca3af;
   --text-muted: #64748b;
 
+  /* Status Colors */
   --green: #22c55e;
   --green-soft: rgba(34, 197, 94, 0.2);
 
@@ -24,15 +29,14 @@
   --yellow: #facc15;
   --yellow-soft: rgba(250, 204, 21, 0.2);
 
+  /* Accent */
   --blue: #38bdf8;
   --purple: #a78bfa;
-
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* ================================
-   BASE
-   ================================ */
+/* ======================================================
+   BASE / RESET
+   ====================================================== */
 
 * {
   box-sizing: border-box;
@@ -51,52 +55,53 @@ body {
   line-height: 1.6;
 }
 
-/* ================================
-   APP LAYOUT
-   ================================ */
+/* ======================================================
+   APP SHELL
+   ====================================================== */
 
 .app {
   display: flex;
   height: 100vh;
   min-height: 0;
-
 }
 
-/* ================================
+/* ======================================================
    SIDEBAR
-   ================================ */
+   ====================================================== */
 
 .sidebar {
   width: 250px;
+  padding: 18px 14px;
   background: var(--bg-header);
   border-right: 1px solid var(--border);
-  padding: 18px 14px;
   overflow-y: auto;
 }
 
 .sidebar h3 {
+  margin-bottom: 14px;
   font-size: 11px;
   letter-spacing: 1.4px;
-  color: var(--text-muted);
   text-transform: uppercase;
-  margin-bottom: 14px;
+  color: var(--text-muted);
 }
 
 .day-title {
+  margin: 18px 0 8px;
   font-size: 12px;
   color: var(--text-secondary);
-  margin: 18px 0 8px;
 }
+
+/* Problem links */
 
 .problem-link {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
+  margin-bottom: 6px;
   border-radius: 8px;
   text-decoration: none;
   color: var(--text-primary);
-  margin-bottom: 6px;
   transition: background 0.15s ease;
 }
 
@@ -110,12 +115,12 @@ body {
 }
 
 .problem-link.active {
+  font-weight: 600;
   background: linear-gradient(
     90deg,
     rgba(56, 189, 248, 0.2),
     rgba(167, 139, 250, 0.15)
   );
-  font-weight: 600;
 }
 
 .problem-link.solved {
@@ -127,9 +132,9 @@ body {
   color: var(--green);
 }
 
-/* ================================
-   MAIN
-   ================================ */
+/* ======================================================
+   MAIN AREA
+   ====================================================== */
 
 .main {
   flex: 1;
@@ -138,14 +143,14 @@ body {
   min-width: 0;
 }
 
-/* ================================
+/* ======================================================
    HEADER
-   ================================ */
+   ====================================================== */
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 28px;
   background: var(--bg-header);
   border-bottom: 1px solid var(--border);
@@ -164,21 +169,24 @@ body {
   gap: 12px;
 }
 
-/* ================================
-   BUTTONS (SAFE)
-   ================================ */
+/* ======================================================
+   BUTTONS
+   ====================================================== */
 
 button {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  border: none;
   padding: 10px 22px;
-  font-weight: 700;
   border-radius: 10px;
+  border: none;
   cursor: pointer;
-  color: #020617;
+
+  font-weight: 700;
   letter-spacing: 0.4px;
-  transition: opacity 0.15s ease, box-shadow 0.15s ease;
+  color: #020617;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   box-shadow: 0 8px 20px rgba(34, 197, 94, 0.35);
+
+  transition: opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
@@ -198,15 +206,19 @@ button:disabled {
   box-shadow: none;
 }
 
-/* ================================
-   CONTENT
-   ================================ */
+/* ======================================================
+   CONTENT SPLIT
+   ====================================================== */
 
 .container {
   display: flex;
   height: 70vh;
   min-height: 0;
 }
+
+/* ======================================================
+   PROBLEM PANEL
+   ====================================================== */
 
 .problem-panel {
   width: 42%;
@@ -217,27 +229,27 @@ button:disabled {
 }
 
 .problem-panel p {
-  color: var(--text-secondary);
   line-height: 1.75;
+  color: var(--text-secondary);
 }
 
 .problem-panel pre {
-  background: #020617;
   padding: 14px;
   border-radius: 10px;
+  background: #020617;
   border: 1px solid var(--border);
 }
 
-/* ================================
-   EDITOR (CRITICAL FIX)
-   ================================ */
+/* ======================================================
+   EDITOR PANEL (CRITICAL)
+   ====================================================== */
 
 .editor-panel {
   width: 58%;
-  background: #020617;
   display: flex;
   flex-direction: column;
   min-width: 0;
+  background: #020617;
 }
 
 .editor {
@@ -245,15 +257,15 @@ button:disabled {
   min-height: 0;
 }
 
-/* ================================
-   OUTPUT
-   ================================ */
+/* ======================================================
+   OUTPUT PANEL
+   ====================================================== */
 
 .output-panel {
+  height: 20vh;
   padding: 18px 28px;
   background: var(--bg-header);
   border-top: 1px solid var(--border);
-  height: 20vh;
   overflow-y: auto;
 }
 
@@ -261,13 +273,13 @@ button:disabled {
   color: var(--text-secondary);
 }
 
-/* ================================
-   TEST BREAKDOWN
-   ================================ */
+/* ======================================================
+   TEST RESULTS
+   ====================================================== */
 
 .test-line {
-  padding: 12px 14px;
   margin-bottom: 12px;
+  padding: 12px 14px;
   border-radius: 10px;
   font-size: 14px;
   line-height: 1.6;
@@ -292,31 +304,31 @@ button:disabled {
   color: var(--blue);
 }
 
-/* ================================
+/* ======================================================
    SCROLLBAR
-   ================================ */
+   ====================================================== */
 
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--blue), var(--purple));
   border-radius: 6px;
+  background: linear-gradient(var(--blue), var(--purple));
 }
 
-/* ================================
+/* ======================================================
    TOP BAR
-   ================================ */
+   ====================================================== */
 
 .topbar {
   height: 58px;
-  background: var(--bg-header);
-  border-bottom: 1px solid var(--border);
+  padding: 0 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 22px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
@@ -328,19 +340,20 @@ button:disabled {
 }
 
 .nav-link {
-  color: var(--text-primary);
-  text-decoration: none;
   padding: 8px 14px;
   border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-primary);
   transition: background 0.15s ease;
 }
 
 .nav-link:hover {
   background: var(--bg-hover);
 }
-/* ================================
-   DASHBOARD UI FIX
-   ================================ */
+
+/* ======================================================
+   DASHBOARD
+   ====================================================== */
 
 .dashboard {
   max-width: 1000px;
@@ -352,7 +365,8 @@ button:disabled {
   margin-bottom: 24px;
 }
 
-/* Top stats grid */
+/* Top stat cards */
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -360,9 +374,15 @@ button:disabled {
   margin-bottom: 24px;
 }
 
+.dashboard .card {
+  padding: 20px;
+  border-radius: 14px;
+  background: var(--bg-panel);
+  box-shadow: var(--shadow-soft);
+}
+
 .stat-card h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
   color: var(--text-secondary);
 }
 
@@ -370,15 +390,8 @@ button:disabled {
   margin: 6px 0;
 }
 
-/* Improve card look */
-.dashboard .card {
-  background: var(--bg-panel);
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: var(--shadow-soft);
-}
-
 /* Day rows */
+
 .day-row {
   display: grid;
   grid-template-columns: 180px 1fr 80px;
@@ -392,10 +405,11 @@ button:disabled {
 }
 
 /* Progress bars */
+
 .progress-bar {
   height: 10px;
-  background: #020617;
   border-radius: 999px;
+  background: #020617;
   overflow: hidden;
 }
 
@@ -406,10 +420,10 @@ button:disabled {
 }
 
 /* Big percentage */
+
 .big {
   font-size: 48px;
   font-weight: 800;
   color: var(--green);
   margin-bottom: 8px;
 }
-/* 

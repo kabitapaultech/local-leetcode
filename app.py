@@ -1,19 +1,39 @@
 from flask import Flask, render_template, request, jsonify
 import json
 import os
-from runner.code_runner import evaluate_code
 from datetime import date
 
+from runner.code_runner import evaluate_code
+
+# ======================================================
+# APP CONFIG
+# ======================================================
 
 app = Flask(__name__)
 
 PROBLEMS_DIR = "problems"
 PROGRESS_FILE = "progress.json"
 
+# ======================================================
+# FILE & JSON UTILITIES
+# ======================================================
 
-# -------------------- LOAD PROBLEM --------------------
+def read_json(path):
+    with open(path) as f:
+        return json.load(f)
+
+def write_json(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+
+# ======================================================
+# PROBLEM SERVICES
+# ======================================================
 
 def load_problem(problem_id):
+    """
+    Find and return a problem JSON by ID.
+    """
     for day in os.listdir(PROBLEMS_DIR):
         day_path = os.path.join(PROBLEMS_DIR, day)
 
@@ -22,18 +42,23 @@ def load_problem(problem_id):
 
         for file in os.listdir(day_path):
             if file.endswith(".json"):
-                file_path = os.path.join(day_path, file)
-                with open(file_path) as f:
-                    p = json.load(f)
-                    if p["id"] == problem_id:
-                        return p
+                problem = read_json(os.path.join(day_path, file))
+                if problem["id"] == problem_id:
+                    return problem
 
     raise Exception(f"Problem {problem_id} not found")
 
 
-# -------------------- SIDEBAR INDEX --------------------
-
 def load_problem_index():
+    """
+    Build sidebar structure:
+    [
+      {
+        day: "Day 1",
+        problems: [{ id, title }]
+      }
+    ]
+    """
     index = []
 
     for day in sorted(os.listdir(PROBLEMS_DIR)):
@@ -45,12 +70,11 @@ def load_problem_index():
         problems = []
         for file in sorted(os.listdir(day_path)):
             if file.endswith(".json"):
-                with open(os.path.join(day_path, file)) as f:
-                    p = json.load(f)
-                    problems.append({
-                        "id": p["id"],
-                        "title": p["title"]
-                    })
+                p = read_json(os.path.join(day_path, file))
+                problems.append({
+                    "id": p["id"],
+                    "title": p["title"]
+                })
 
         if problems:
             index.append({
@@ -58,30 +82,45 @@ def load_problem_index():
                 "problems": problems
             })
 
-    print("✅ Sidebar index:", index)  # DEBUG (you WILL see this now)
+    print("✅ Sidebar index:", index)  # DEBUG
     return index
 
-
-# -------------------- PROGRESS --------------------
+# ======================================================
+# PROGRESS SERVICES
+# ======================================================
 
 def load_progress():
     if not os.path.exists(PROGRESS_FILE):
         return {"solved": []}
-    with open(PROGRESS_FILE) as f:
-        return json.load(f)
+    return read_json(PROGRESS_FILE)
 
 
 def save_progress(progress):
-    with open(PROGRESS_FILE, "w") as f:
-        json.dump(progress, f, indent=2)
+    write_json(PROGRESS_FILE, progress)
 
 
-# -------------------- ROUTES --------------------
+def update_progress(problem_id):
+    """
+    Update solved list and daily solve log.
+    """
+    progress = load_progress()
+
+    if problem_id not in progress.get("solved", []):
+        progress.setdefault("solved", []).append(problem_id)
+
+        today = str(date.today())
+        progress.setdefault("solve_log", {})
+        progress["solve_log"].setdefault(today, []).append(problem_id)
+
+        save_progress(progress)
+
+# ======================================================
+# ROUTES – PROBLEM VIEW
+# ======================================================
 
 @app.route("/")
 @app.route("/problem/<problem_id>")
 def show_problem(problem_id=None):
-
     sidebar = load_problem_index()
 
     if not sidebar:
@@ -100,6 +139,9 @@ def show_problem(problem_id=None):
         solved=progress.get("solved", [])
     )
 
+# ======================================================
+# ROUTES – RUN CODE
+# ======================================================
 
 @app.route("/run", methods=["POST"])
 def run_code():
@@ -110,51 +152,48 @@ def run_code():
     problem = load_problem(problem_id)
     passed, details = evaluate_code(code, problem)
 
-    progress = load_progress()
-    if passed and problem_id not in progress["solved"]:
-        progress["solved"].append(problem_id)
-        today = str(date.today())
-        progress.setdefault("solve_log", {})
-        progress["solve_log"].setdefault(today, [])
-        progress["solve_log"][today].append(problem_id)
-
-        save_progress(progress)
+    if passed:
+        update_progress(problem_id)
 
     return jsonify({
         "passed": passed,
         "details": details
     })
 
-@app.route("/dashboard")
-def dashboard():
-    sidebar = load_problem_index()
-    progress = load_progress()
+# ======================================================
+# DASHBOARD HELPERS
+# ======================================================
 
-    solved = set(progress.get("solved", []))
-
+def calculate_day_stats(sidebar, solved_set):
     total = 0
-    day_stats = []
+    stats = []
 
     for day in sidebar:
         day_total = len(day["problems"])
-        day_solved = sum(1 for p in day["problems"] if p["id"] in solved)
+        day_solved = sum(
+            1 for p in day["problems"] if p["id"] in solved_set
+        )
 
         total += day_total
-        day_stats.append({
+        stats.append({
             "day": day["day"],
             "solved": day_solved,
             "total": day_total,
             "percent": int((day_solved / day_total) * 100) if day_total else 0
         })
 
-    overall_percent = int((len(solved) / total) * 100) if total else 0
+    return total, stats
 
-    # 🔥 Streak calculation
-    streak = 0
-    best_streak = 0
+
+def calculate_streak(progress):
+    """
+    Calculate current and best streak from solve_log.
+    """
     log = progress.get("solve_log", {})
-
     sorted_days = sorted(log.keys())
+
+    streak = 0
+    best = 0
     prev = None
 
     for d in sorted_days:
@@ -164,8 +203,26 @@ def dashboard():
             diff = (date.fromisoformat(d) - date.fromisoformat(prev)).days
             streak = streak + 1 if diff == 1 else 1
 
-        best_streak = max(best_streak, streak)
+        best = max(best, streak)
         prev = d
+
+    return streak, best
+
+# ======================================================
+# ROUTES – DASHBOARD
+# ======================================================
+
+@app.route("/dashboard")
+def dashboard():
+    sidebar = load_problem_index()
+    progress = load_progress()
+
+    solved = set(progress.get("solved", []))
+
+    total, day_stats = calculate_day_stats(sidebar, solved)
+    overall_percent = int((len(solved) / total) * 100) if total else 0
+
+    current_streak, best_streak = calculate_streak(progress)
 
     return render_template(
         "dashboard.html",
@@ -173,9 +230,13 @@ def dashboard():
         day_stats=day_stats,
         solved_count=len(solved),
         total_count=total,
-        current_streak=streak,
+        current_streak=current_streak,
         best_streak=best_streak
     )
+
+# ======================================================
+# ENTRY POINT
+# ======================================================
 
 if __name__ == "__main__":
     app.run(debug=True)
