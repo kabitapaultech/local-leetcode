@@ -1,7 +1,7 @@
 {
   "id": "list_to_dict",
   "title": "List to Dictionary",
-  "description": "Convert list to dictionary with index as key.",
+  "description": "Input: `arr` (list). Return: Dict where keys are string indices ('0', '1'...) and values are elements.",
   "function_signature": "def solve(arr):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2, 3",
   "sample_output": "{'0': 1, '1': 2, '2': 3}",

@@ -1,7 +1,7 @@
 {
   "id": "student_dictionary",
   "title": "Student Dictionary Creation",
-  "description": "Create and return student dictionary.",
+  "description": "Input: `name` (str), `marks` (int). Return: Dict `{'name': name, 'marks': marks}`.",
   "function_signature": "def solve(name, marks):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'A', 90",
   "sample_output": "{'name': 'A', 'marks': 90}",

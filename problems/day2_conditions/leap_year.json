@@ -1,7 +1,7 @@
 {
   "id": "leap_year",
   "title": "Leap Year Check",
-  "description": "Check if year is leap year.",
+  "description": "Input: `year` (int). Return: `True` if leap year, else `False`.",
   "function_signature": "def solve(year):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "2020",
   "sample_output": "True",

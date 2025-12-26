@@ -1,7 +1,7 @@
 {
   "id": "remove_duplicates",
   "title": "Remove Duplicates",
-  "description": "Remove duplicates from list.",
+  "description": "Input: `arr` (list). Return: List with duplicates removed, preserving order.",
   "function_signature": "def solve(arr):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2, 2, 3",
   "sample_output": "[1, 2, 3]",

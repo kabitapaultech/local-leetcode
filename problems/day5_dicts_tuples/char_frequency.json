@@ -1,7 +1,7 @@
 {
   "id": "char_frequency",
   "title": "Character Frequency",
-  "description": "Return frequency of each character.",
+  "description": "Input: `s` (str). Return: Dict mapping character to its frequency.",
   "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'aab'",
   "sample_output": "{'a': 2, 'b': 1}",

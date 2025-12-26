@@ -1,7 +1,7 @@
 {
   "id": "highest_marks",
   "title": "Highest Marks Student",
-  "description": "Return name of student with highest marks.",
+  "description": "Input: `d` (dict of name:marks). Return: Name of student with highest marks.",
   "function_signature": "def solve(d):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "{'A': 90, 'B': 80}",
   "sample_output": "'A'",

@@ -1,7 +1,7 @@
 {
   "id": "duplicate_finder",
   "title": "Duplicate Finder",
-  "description": "Return list of duplicates.",
+  "description": "Input: `arr` (list). Return: List of elements that appear more than once.",
   "function_signature": "def solve(arr):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2, 2, 3",
   "sample_output": "[2]",

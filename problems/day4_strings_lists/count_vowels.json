@@ -1,7 +1,7 @@
 {
   "id": "count_vowels",
   "title": "Count Vowels",
-  "description": "Count vowels in string.",
+  "description": "Input: `s` (str). Return: Integer count of vowels (a, e, i, o, u).",
   "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'python'",
   "sample_output": "1",

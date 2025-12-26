@@ -1,7 +1,7 @@
 {
   "id": "student_management",
   "title": "Student Management System",
-  "description": "Return total students.",
+  "description": "Input: `students` (list of dicts). Return: Total number of students.",
   "function_signature": "def solve(students):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "{'A': 90}",
   "sample_output": "1",

@@ -1,7 +1,7 @@
 {
   "id": "phonebook_search",
   "title": "Phonebook Search",
-  "description": "Return phone number or Not Found.",
+  "description": "Input: `phonebook` (dict), `name` (str). Return: Phone number if found, else 'Not Found'.",
   "function_signature": "def solve(phonebook, name):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "{'A': '123'}, 'A'",
   "sample_output": "'123'",

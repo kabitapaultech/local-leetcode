@@ -1,7 +1,7 @@
 {
   "id": "km_to_meters",
   "title": "Kilometers to Meters",
-  "description": "Convert kilometers to meters.",
+  "description": "Input: `km` (float/int). Return: Integer representing meters (1 km = 1000m).",
   "function_signature": "def solve(km):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1",
   "sample_output": "1000",

@@ -1,7 +1,7 @@
 {
   "id": "two_sum_basic",
   "title": "Two Sum (Basic)",
-  "description": "Return indices of two numbers.",
+  "description": "Input: `arr` (list), `target` (int). Return: List `[index1, index2]` summing to target.",
   "function_signature": "def solve(arr, target):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "[2, 7, 11, 15], 9",
   "sample_output": "[0, 1]",

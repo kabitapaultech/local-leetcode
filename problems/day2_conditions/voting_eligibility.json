@@ -1,7 +1,7 @@
 {
   "id": "voting_eligibility",
   "title": "Voting Eligibility",
-  "description": "Check voting eligibility.",
+  "description": "Input: `age` (int). Return: 'Eligible' if age >= 18, else 'Not Eligible'.",
   "function_signature": "def solve(age):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "18",
   "sample_output": "'Eligible'",

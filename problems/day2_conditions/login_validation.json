@@ -1,7 +1,7 @@
 {
   "id": "login_validation",
   "title": "Login Validation",
-  "description": "Validate login credentials.",
+  "description": "Input: `username` (str), `password` (str). Return: `True` if username is 'admin' and password is '1234', else `False`.",
   "function_signature": "def solve(username, password):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'admin', '1234'",
   "sample_output": "True",

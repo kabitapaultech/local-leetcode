@@ -1,7 +1,7 @@
 {
   "id": "fibonacci_function",
   "title": "Fibonacci Function",
-  "description": "Return Fibonacci sequence up to n terms.",
+  "description": "Input: `n` (int). Return: List of first `n` Fibonacci numbers (starting 0, 1).",
   "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1",
   "sample_output": "[0]",

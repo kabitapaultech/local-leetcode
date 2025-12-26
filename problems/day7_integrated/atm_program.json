@@ -1,7 +1,7 @@
 {
   "id": "atm_program",
   "title": "ATM Program",
-  "description": "Withdraw amount if possible.",
+  "description": "Input: `balance` (num), `amount` (num). Return: New balance if sufficient funds, else 'Insufficient Balance'.",
   "function_signature": "def solve(balance, amount):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1000, 500",
   "sample_output": "500",

@@ -1,7 +1,7 @@
 {
   "id": "fizz_buzz",
   "title": "FizzBuzz",
-  "description": "Return FizzBuzz list up to n.",
+  "description": "Input: `n` (int). Return: List of strings 1 to n. Replace multiples of 3 with 'Fizz', 5 with 'Buzz', both with 'FizzBuzz'.",
   "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "5",
   "sample_output": "['1', '2', 'Fizz', '4', 'Buzz']",

@@ -1,7 +1,7 @@
 {
   "id": "grade_calculator",
   "title": "Grade Calculator",
-  "description": "Return grade based on marks.",
+  "description": "Input: `marks` (int). Return: Grade 'A' (>90), 'B' (>80), 'C' (>70), 'D' (>60), or 'F'.",
   "function_signature": "def solve(marks):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "95",
   "sample_output": "'A'",

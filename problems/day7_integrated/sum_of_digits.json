@@ -1,7 +1,7 @@
 {
   "id": "sum_of_digits",
   "title": "Sum of Digits",
-  "description": "Return sum of digits.",
+  "description": "Input: `n` (int). Return: Sum of its digits.",
   "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "123",
   "sample_output": "6",

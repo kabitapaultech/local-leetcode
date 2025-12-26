@@ -1,7 +1,7 @@
 {
   "id": "menu_driven",
   "title": "Menu Driven Program",
-  "description": "Return processed choices count.",
+  "description": "Input: `choices` (list). Return: Integer count of items in the list.",
   "function_signature": "def solve(choices):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2, 3",
   "sample_output": "3",

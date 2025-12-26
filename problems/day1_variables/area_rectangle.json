@@ -1,7 +1,7 @@
 {
   "id": "area_rectangle",
   "title": "Area of Rectangle",
-  "description": "Return area of rectangle.",
+  "description": "Input: `length` (number), `breadth` (number). Return: Number representing area.",
   "function_signature": "def solve(length, breadth):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "5, 4",
   "sample_output": "20",

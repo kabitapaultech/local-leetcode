@@ -1,7 +1,7 @@
 {
   "id": "factorial_function",
   "title": "Factorial Function",
-  "description": "Return factorial.",
+  "description": "Input: `n` (int). Return: Factorial of `n`.",
   "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "0",
   "sample_output": "1",

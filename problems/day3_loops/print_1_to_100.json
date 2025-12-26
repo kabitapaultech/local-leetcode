@@ -1,7 +1,7 @@
 {
   "id": "print_1_to_100",
   "title": "Print 1 to 100",
-  "description": "Return numbers from 1 to 100 as list.",
+  "description": "Input: None. Return: List of integers from 1 to 100.",
   "function_signature": "def solve():\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "None",
   "sample_output": "[1, 2, 3, 4, 5]",

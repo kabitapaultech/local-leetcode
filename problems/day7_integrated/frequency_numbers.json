@@ -1,7 +1,7 @@
 {
   "id": "frequency_numbers",
   "title": "Frequency of Numbers",
-  "description": "Return frequency of numbers.",
+  "description": "Input: `arr` (list). Return: Dict mapping number (as string key) to frequency.",
   "function_signature": "def solve(arr):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2, 2, 3",
   "sample_output": "{'1': 1, '2': 2, '3': 1}",

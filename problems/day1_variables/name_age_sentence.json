@@ -1,7 +1,7 @@
 {
   "id": "name_age_sentence",
   "title": "Name and Age Sentence",
-  "description": "Return a sentence using name and age.",
+  "description": "Input: `name` (str), `age` (int). Return: String 'My name is [name] and I am [age] years old'.",
   "function_signature": "def solve(name, age):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'Alice', 20",
   "sample_output": "'My name is Alice and I am 20 years old'",

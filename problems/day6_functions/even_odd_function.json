@@ -1,7 +1,7 @@
 {
   "id": "even_odd_function",
   "title": "Even or Odd Function",
-  "description": "Return Even or Odd.",
+  "description": "Input: `n` (int). Return: 'Even' or 'Odd'.",
   "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "2",
   "sample_output": "'Even'",

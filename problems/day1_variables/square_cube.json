@@ -1,7 +1,7 @@
 {
   "id": "square_cube",
   "title": "Square and Cube",
-  "description": "Return square and cube of a number.",
+  "description": "Input: `n` (int). Return: List `[square, cube]`.",
   "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "2",
   "sample_output": "[4, 8]",

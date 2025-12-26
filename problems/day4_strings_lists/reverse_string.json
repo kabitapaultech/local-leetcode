@@ -1,7 +1,7 @@
 {
   "id": "reverse_string",
   "title": "Reverse String",
-  "description": "Return reversed string.",
+  "description": "Input: `s` (str). Return: The reversed string.",
   "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'python'",
   "sample_output": "'nohtyp'",

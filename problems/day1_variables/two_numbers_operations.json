@@ -1,7 +1,7 @@
 {
   "id": "two_numbers_operations",
   "title": "Two Numbers Operations",
-  "description": "Return sum, difference and product.",
+  "description": "Input: `a` (int), `b` (int). Return: List `[sum, difference, product]`.",
   "function_signature": "def solve(a, b):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "5, 3",
   "sample_output": "[8, 2, 15]",

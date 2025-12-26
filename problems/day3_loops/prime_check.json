@@ -1,7 +1,7 @@
 {
   "id": "prime_check",
   "title": "Prime Check",
-  "description": "Check if number is prime.",
+  "description": "Input: `n` (int). Return: `True` if prime, else `False`.",
   "function_signature": "def solve(n):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "2",
   "sample_output": "True",

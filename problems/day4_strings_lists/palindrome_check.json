@@ -1,7 +1,7 @@
 {
   "id": "palindrome_check",
   "title": "Palindrome Check",
-  "description": "Check if string is palindrome.",
+  "description": "Input: `s` (str). Return: `True` if `s` is a palindrome, else `False`.",
   "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'madam'",
   "sample_output": "True",

@@ -1,7 +1,7 @@
 {
   "id": "second_largest",
   "title": "Second Largest Element",
-  "description": "Return second largest element.",
+  "description": "Input: `arr` (list). Return: The second largest number in the list.",
   "function_signature": "def solve(arr):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2, 3",
   "sample_output": "2",

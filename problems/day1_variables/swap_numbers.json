@@ -1,7 +1,7 @@
 {
   "id": "swap_numbers",
   "title": "Swap Two Numbers",
-  "description": "Return swapped values.",
+  "description": "Input: `a`, `b`. Return: List `[b, a]`.",
   "function_signature": "def solve(a, b):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2",
   "sample_output": "[2, 1]",

@@ -1,7 +1,7 @@
 {
   "id": "max_of_three",
   "title": "Max of Three Numbers",
-  "description": "Return max of three numbers.",
+  "description": "Input: `a`, `b`, `c`. Return: The largest number.",
   "function_signature": "def solve(a, b, c):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "1, 2, 3",
   "sample_output": "3",

@@ -1,7 +1,7 @@
 {
   "id": "add_function",
   "title": "Add Two Numbers",
-  "description": "Return sum of two numbers.",
+  "description": "Input: `a`, `b`. Return: Sum of `a` and `b`.",
   "function_signature": "def solve(a, b):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "2, 3",
   "sample_output": "5",

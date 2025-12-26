@@ -1,7 +1,7 @@
 {
   "id": "total_average_marks",
   "title": "Total and Average Marks",
-  "description": "Return total and average of three marks.",
+  "description": "Input: `a`, `b`, `c` (ints). Return: List `[total, average]`.",
   "function_signature": "def solve(a, b, c):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "70, 80, 90",
   "sample_output": "[240, 80.0]",

@@ -1,7 +1,7 @@
 {
   "id": "largest_of_two",
   "title": "Largest of Two Numbers",
-  "description": "Return largest of two numbers.",
+  "description": "Input: `a`, `b`. Return: The larger number.",
   "function_signature": "def solve(a, b):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "5, 3",
   "sample_output": "5",

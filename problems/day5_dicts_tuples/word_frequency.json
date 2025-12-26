@@ -1,7 +1,7 @@
 {
   "id": "word_frequency",
   "title": "Word Frequency",
-  "description": "Return frequency of each word.",
+  "description": "Input: `s` (str). Return: Dict mapping words to their frequency.",
   "function_signature": "def solve(s):\n    \"\"\"\n    Return result, do not print\n    \"\"\"\n    pass",
   "sample_input": "'a b a'",
   "sample_output": "{'a': 2, 'b': 1}",
